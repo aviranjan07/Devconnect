@@ -1,0 +1,40 @@
+/* Apply to whole page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+}
+
+/* Form Style */
+form {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: auto;
+}
+
+/* Input Style */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Button Style */
+button {
+    background: #38bdf8;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* hover Effect */
+button:hover {
+    background: #0ea5e9;
+}
