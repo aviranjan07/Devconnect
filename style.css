@@ -46,3 +46,11 @@ nav {
     background: #020617;
     padding: 15px;
 } 
+
+/* Style Navbar Links */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
