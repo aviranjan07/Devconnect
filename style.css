@@ -60,3 +60,9 @@ nav a {
     margin: 0 10px;
 }
 
+/* Media Queries */
+@media (max-width: 600px) {
+    body {
+        background: #020617;
+    }
+}
