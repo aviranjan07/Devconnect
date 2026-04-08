@@ -42,6 +42,7 @@ button:hover {
 nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background: #020617;
     padding: 15px;
 } 
