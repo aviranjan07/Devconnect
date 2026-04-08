@@ -37,3 +37,11 @@ button {
 button:hover {
     background: #db7231;
 } 
+
+/* nav Style*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: #020617;
+    padding: 15px;
+} 
