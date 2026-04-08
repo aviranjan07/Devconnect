@@ -13,7 +13,13 @@ form {
     border-radius: 10px;
     width: 300px;
     margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    flex-direction: column;
 }
+
  /* Input Style */
 input {
     width: 90%;
