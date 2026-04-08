@@ -1,4 +1,3 @@
-function greet() {
-    console.log("Welcome to DevConnect");
+function handleCllick() {
+    alert ("Button Clicked");
 }
-greet();
