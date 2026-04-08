@@ -62,6 +62,9 @@ nav a {
 
 /* Media Queries */
 @media (max-width: 600px) {
+    form {
+        width: 90%;
+    }
     body {
         background: #020617;
     }
