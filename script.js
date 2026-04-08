@@ -3,10 +3,13 @@ function handleSubmit(event) {
 
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
+  let message = document.getElementById("message");
 
   if (email === "" || password === "") {
-    alert("All fields are required ❌");
+    message.innerText = "All fields are required ❌";
+    message.style.color = "red";
   } else {
-    alert("Login Successful ✅");
+    message.innerText = "Login Successful ✅";
+    message.style.color = "green"
   }
 }
