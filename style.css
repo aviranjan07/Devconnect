@@ -14,8 +14,7 @@ form {
     width: 300px;
     margin: auto;
 }
-
-/* Input Style */
+ /* Input Style */
 input {
     width: 90%;
     padding: 10px;
@@ -24,7 +23,7 @@ input {
     border-radius: 5px;
 }
 
-/* Button Style */
+/* Button Style  */
 button {
     background: #38bdf8;
     color: black;
@@ -36,5 +35,5 @@ button {
 
 /* hover Effect */
 button:hover {
-    background: #0ea5e9;
-}
+    background: #db7231;
+} 
