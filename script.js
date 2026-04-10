@@ -14,31 +14,67 @@ function handleSubmit(event) {
   }
 }
 
+// Store Posts in Local Storage
+
 function addPost() {
   let input = document.getElementById("postInput").value;
-  let container = document.getElementById("postContainer");
+  // let container = document.getElementById("postContainer");
 
   if(input === "") {
     alert("Write Something First ❌");
     return;
   }
+   let posts = JSON.parse(localStorage.getItem("posts")) || [];
 
-  let postDiv = document.createElement("div");
+    posts.push(input);
 
-  let newPost = document.createElement("p");
-  newPost.innerText = input;
+    localStorage.setItem("posts", JSON.stringify(posts));
 
-  let deleteBtn = document.createElement("button");
-  deleteBtn.innerText = "Delete";
+    displayPosts();
 
-  deleteBtn.onclick = function() {
-    postDiv.remove();
-  }
-
-  postDiv.appendChild(newPost);
-  postDiv.appendChild(deleteBtn);
-
-  container.appendChild(postDiv);
-  Document.getElementById("postInput").value = "";
-
+    document.getElementById("postInput").value = "";
 }
+
+
+// Display Saved Posts
+
+function displayPosts() {
+    let container = document.getElementById("postContainer");
+    container.innerHTML = "";
+
+    let posts = JSON.parse(localStorage.getItem("posts")) || [];
+
+    posts.forEach((post, index) => {
+        let postDiv = document.createElement("div");
+
+        let text = document.createElement("p");
+        text.innerText = post;
+
+        let deleteBtn = document.createElement("button");
+        deleteBtn.innerText = "Delete";
+
+        deleteBtn.onclick = function () {
+            deletePost(index);
+        };
+
+        postDiv.appendChild(text);
+        postDiv.appendChild(deleteBtn);
+
+        container.appendChild(postDiv);
+    });
+}
+
+// Delete Function 
+
+function deletePost(index) {
+    let posts = JSON.parse(localStorage.getItem("posts"));
+
+    posts.splice(index, 1);
+
+    localStorage.setItem("posts", JSON.stringify(posts));
+
+    displayPosts();
+}
+
+// Load Data on Page Start
+displayPosts();
